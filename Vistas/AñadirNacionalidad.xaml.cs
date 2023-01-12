@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Personas.VM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,12 @@ namespace Personas.Vistas
     /// </summary>
     public partial class AñadirNacionalidad : Window
     {
+        private AñadirNacionalidadVM vm;
         public AñadirNacionalidad()
         {
             InitializeComponent();
+            vm = new AñadirNacionalidadVM();
+            this.DataContext = vm;
         }
 
         private void AceptarButton_Click(object sender, RoutedEventArgs e)

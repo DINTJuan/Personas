@@ -6,7 +6,11 @@
              xmlns:local="clr-namespace:Personas.Vistas"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-            
-    </Grid>
+    <ListBox ItemsSource="{Binding Path=ListaPersonas}">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <TextBlock Text="{Binding Path=Nombre}"/>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ListBox>
 </UserControl>

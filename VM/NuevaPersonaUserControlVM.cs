@@ -1,0 +1,57 @@
+﻿using Microsoft.Toolkit.Mvvm.ComponentModel;
+using Microsoft.Toolkit.Mvvm.Input;
+using Personas.Clases;
+using Personas.Servicios;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Personas.VM
+{
+    class NuevaPersonaUserControlVM : ObservableObject
+    {
+        private NavegacionServicio navegacion;
+        public Persona nuevaPersona;
+        private ObservableCollection<string> listaNacionalida;
+
+        public Persona NuevaPersona
+        {
+            get { return nuevaPersona; }
+            set { SetProperty(ref nuevaPersona, value); }
+        }
+
+        public ObservableCollection<string> ListaNacionalida
+        {
+            get { return listaNacionalida; }
+            set { SetProperty(ref listaNacionalida, value); }
+        }
+
+        public RelayCommand NuevaNacionalidadCommand { get; }
+        public RelayCommand AceptarNPersonaCommand { get; }
+
+        public NuevaPersonaUserControlVM()
+        {
+            nuevaPersona = new Persona();
+            ObservableCollection<string> lista = new ObservableCollection<string>();
+            lista.Add("Italiana");
+            lista.Add("Española");
+            lista.Add("Francesa");
+            listaNacionalida = lista;
+            NuevaNacionalidadCommand = new RelayCommand(AñadirNacionalidad);
+            AceptarNPersonaCommand = new RelayCommand(AceptarNuevaPersona);
+        }
+
+        public void AñadirNacionalidad()
+        {
+            navegacion.AbrirNacionalidad();
+        }
+
+        public void AceptarNuevaPersona()
+        {
+            // Añadiria a la nueva Persona
+        }
+    }
+}

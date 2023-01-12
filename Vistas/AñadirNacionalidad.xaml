@@ -5,10 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas.Vistas"
         mc:Ignorable="d"
-        Title="AñadirNacionalidad" Height="450" Width="800">
+        Title="AñadirNacionalidad" Height="450" Width="800" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip">
     <StackPanel>
         <TextBlock>Nacionalidad</TextBlock>
-        <TextBox Margin="5" Text="{Binding Path=Nacionalidad}"/>
+        <TextBox Margin="5" Text="{Binding Path=Ncd}"/>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
             <Button x:Name="AceptarButton" Margin="5" IsDefault="True" Click="AceptarButton_Click">Aceptar</Button>
             <Button x:Name="CancelarButton" Margin="5" IsCancel="True" >Cancelar</Button>

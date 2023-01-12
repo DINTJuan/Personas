@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Personas.VM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace Personas.Vistas
     /// </summary>
     public partial class ListaPersonasUserControl : UserControl
     {
+        private ListaPersonaUserControlVM vm;
         public ListaPersonasUserControl()
         {
             InitializeComponent();
+            vm = new ListaPersonaUserControlVM();
+            this.DataContext = vm;
         }
     }
 }

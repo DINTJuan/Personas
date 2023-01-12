@@ -81,6 +81,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Servicios\NavegacionServicio.cs" />
     <Compile Include="Servicios\PersonaServicio.cs" />
     <Compile Include="Vistas\AñadirNacionalidad.xaml.cs">
       <DependentUpon>AñadirNacionalidad.xaml</DependentUpon>
@@ -91,6 +92,10 @@
     <Compile Include="Vistas\NuevaPersonaUserControl.xaml.cs">
       <DependentUpon>NuevaPersonaUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="VM\AñadirNacionalidadVM.cs" />
+    <Compile Include="VM\ListaPersonaUserControlVM.cs" />
+    <Compile Include="VM\MainWindowVM.cs" />
+    <Compile Include="VM\NuevaPersonaUserControlVM.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -144,10 +149,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controles\" />
-    <Folder Include="VM\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Imagenes\añadir.ico" />
     <Resource Include="Imagenes\personas.ico" />
