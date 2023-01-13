@@ -22,5 +22,10 @@ namespace Personas.VM
            
         }
 
+        public void AñadirNuevaNacionalidad()
+        {
+
+        }
+
     }
 }

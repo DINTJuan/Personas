@@ -14,7 +14,7 @@ namespace Personas.VM
     class NuevaPersonaUserControlVM : ObservableObject
     {
         private NavegacionServicio navegacion;
-        public Persona nuevaPersona;
+        private Persona nuevaPersona;
         private ObservableCollection<string> listaNacionalida;
 
         public Persona NuevaPersona
@@ -35,12 +35,12 @@ namespace Personas.VM
         public NuevaPersonaUserControlVM()
         {
             navegacion = new NavegacionServicio();
-            nuevaPersona = new Persona();
+            NuevaPersona = new Persona();
             ObservableCollection<string> lista = new ObservableCollection<string>();
             lista.Add("Italiana");
             lista.Add("Española");
             lista.Add("Francesa");
-            listaNacionalida = lista;
+            ListaNacionalida = lista;
             NuevaNacionalidadCommand = new RelayCommand(AñadirNacionalidad);
             AceptarNPersonaCommand = new RelayCommand(AceptarNuevaPersona);
         }

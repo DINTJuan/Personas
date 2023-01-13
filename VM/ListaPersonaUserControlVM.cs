@@ -24,7 +24,7 @@ namespace Personas.VM
         public ListaPersonaUserControlVM()
         {
             personaservicio = new PersonaServicio();
-            listaPersonas = personaservicio.SacarPersonas();
+            ListaPersonas = personaservicio.SacarPersonas();
         }
     }
 }

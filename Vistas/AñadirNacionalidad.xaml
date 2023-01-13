@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Personas.Vistas"
         mc:Ignorable="d"
-        Title="AñadirNacionalidad" Height="450" Width="800" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip">
+        Title="AñadirNacionalidad" Height="450" Width="800" ShowInTaskbar="False" ResizeMode="CanResizeWithGrip" Icon="..\Imagenes\añadir.ico">
     <StackPanel>
         <TextBlock>Nacionalidad</TextBlock>
         <TextBox Margin="5" Text="{Binding Path=Ncd}"/>

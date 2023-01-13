@@ -10,6 +10,12 @@ namespace Personas.Servicios
 {
     class NavegacionServicio
     {
+        private ListaPersonasUserControl listaPUC;
+        public NavegacionServicio()
+        {
+            listaPUC = new ListaPersonasUserControl();
+        }
+
         public bool? AbrirNacionalidad()
         {
             AñadirNacionalidad nc = new AñadirNacionalidad();
@@ -23,7 +29,8 @@ namespace Personas.Servicios
 
         public UserControl AbrirListaPersona()
         {
-            return new ListaPersonasUserControl();
+            return listaPUC;
         }
+
     }
 }

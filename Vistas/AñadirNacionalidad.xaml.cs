@@ -30,7 +30,8 @@ namespace Personas.Vistas
 
         private void AceptarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            vm.AñadirNuevaNacionalidad();
+            DialogResult = true;
         }
     }
 }
