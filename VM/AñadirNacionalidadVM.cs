@@ -19,7 +19,7 @@ namespace Personas.VM
 
         public AñadirNacionalidadVM()
         {
-            Ncd = "Ejemplo";
+           
         }
 
     }

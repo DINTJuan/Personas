@@ -34,6 +34,7 @@ namespace Personas.VM
 
         public NuevaPersonaUserControlVM()
         {
+            navegacion = new NavegacionServicio();
             nuevaPersona = new Persona();
             ObservableCollection<string> lista = new ObservableCollection<string>();
             lista.Add("Italiana");
